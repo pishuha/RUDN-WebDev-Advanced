@@ -1,9 +1,12 @@
 import styles from "./BoardCard.module.css";
 
+
+
 type BoardCardProps = {
   title: string;
+  isDone?: boolean
 };
 
-export function BoardCard({ title }: BoardCardProps) {
-  return <div className={styles.card}>{title}</div>;
+export function BoardCard({ title, isDone }: BoardCardProps) {
+  return <div className={ isDone ? styles.isDone : styles.card}>{title}</div>;
 }
